@@ -3,7 +3,9 @@ import Link from 'next/link'
 export function Nav() {
   return (
     <nav>
-      <Link href="/">GA TRYOUT</Link>
+      <Link id="home" href="/">
+        GA TRYOUT
+      </Link>
       <div>
         <Link id="shop" href={'#'}>
           Shop
