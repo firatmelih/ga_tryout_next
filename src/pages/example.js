@@ -5,6 +5,18 @@ export default function Home() {
     <div>
       previewing example pages
       <Link href={'/'}>back to main</Link>
+      <br />
+      <br />
+      <a href="https://main--willowy-wisp-f52e35.netlify.app/">
+        {' '}
+        Go to cross domain website
+      </a>
+      <br />
+      <br />
+      <a target="_blank" href="https://main--willowy-wisp-f52e35.netlify.app/">
+        {' '}
+        Go to cross domain website
+      </a>
     </div>
   )
 }
