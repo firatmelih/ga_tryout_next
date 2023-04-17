@@ -1,11 +1,19 @@
+import Link from 'next/link'
+
 export function Nav() {
   return (
     <nav>
-      <div>GA TRYOUT</div>
+      <Link href="/">GA TRYOUT</Link>
       <div>
-        <button>Shop</button>
-        <button>Contact</button>
-        <button>Call</button>
+        <Link id="shop" href={'#'}>
+          Shop
+        </Link>
+        <Link id="contact" href={'#'}>
+          Contact
+        </Link>
+        <Link id="call" href={'#'}>
+          Call
+        </Link>
       </div>
     </nav>
   )
