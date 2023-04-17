@@ -1,20 +1,26 @@
+import { usePrivacyStore } from '@/store/privacy'
 import { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
 export default function Document() {
+  const { allowed } = usePrivacyStore()
   return (
     <Html lang="en">
       <Head>
         <title>Main domain with GA4</title>
-        <Script strategy="beforeInteractive">
-          {`
+        {allowed ? (
+          <Script strategy="beforeInteractive">
+            {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-MXC5JHT');
           `}
-        </Script>
+          </Script>
+        ) : (
+          ''
+        )}
       </Head>
       <body>
         <iframe

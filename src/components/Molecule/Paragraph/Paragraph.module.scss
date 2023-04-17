@@ -1,0 +1,16 @@
+.Paragraph {
+  padding: 0 200px;
+  &__scroll {
+    display: flex;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    border-radius: 999px;
+    justify-content: center;
+    bottom: 50px;
+    right: 15px;
+    background-color: red;
+    color: white;
+  }
+}
