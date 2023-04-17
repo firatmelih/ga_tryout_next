@@ -4,8 +4,10 @@ export default function Home() {
   return (
     <>
       <div>
-        previewing main page
-        <Link href={'/example'}>back to main</Link>
+        <p>You are at Index page</p>
+        <br />
+        <br />
+        <Link href={'/example'}>go to example route</Link>
       </div>
     </>
   )
