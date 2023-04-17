@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <title>Main domain with GA4</title>
         <Script strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
